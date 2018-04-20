@@ -45,3 +45,5 @@ jobs:
       - store_artifacts:
           path: target/game-1.jar
           destination: game.jar
+      - store_artifacts:
+          path: res/
