@@ -42,8 +42,7 @@ jobs:
       
       - run: mvn package
       
+      - run: tar cvf game.tar --transform 'flags=r;s|target/game-1.jar|lilithsthrone.jar|' target/game-1.jar res/
+      
       - store_artifacts:
-          path: target/game-1.jar
-          destination: game.jar
-      - store_artifacts:
-          path: res/
+          path: game.tar
